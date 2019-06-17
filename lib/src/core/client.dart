@@ -212,6 +212,12 @@ class Web3Client {
     ]).then(hexToBytes);
   }
 
+  Future<TransactionReceipt> getTransactionReceipt(String transactionHash){
+    return _makeRPCCall<Map<String,dynamic>>(
+      'eth_getTransactionReceipt',[transactionHash])
+        .then((s)=>TransactionReceipt.fromMap(s));
+  }
+
   /// Gets the amount of transactions issued by the specified [address].
   ///
   /// This function allows specifying a custom block mined in the past to get

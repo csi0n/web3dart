@@ -8,6 +8,7 @@ import 'package:http/http.dart';
 import 'package:json_rpc_2/json_rpc_2.dart' as rpc;
 import 'package:meta/meta.dart';
 import 'package:stream_channel/stream_channel.dart';
+import 'package:web3dart/src/core/transaction_receipt.dart';
 
 import 'contracts.dart';
 import 'credentials.dart';
